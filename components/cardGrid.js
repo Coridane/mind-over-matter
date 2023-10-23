@@ -12,7 +12,7 @@ export default function App({ uniqueCardsArray }) {
     return (
       <div className="App">
         <header>
-          <h3>Play the Flip card game</h3>
+          <h3>Play the Mind Over Matter memory game</h3>
           <div>
             Select two cards with same content consequtively to make them vanish
           </div>
