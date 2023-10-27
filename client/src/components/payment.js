@@ -1,72 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
+import React, { useState } from 'react';
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 
-// Replace with your own Stripe Publishable Key
-const stripePromise = loadStripe('your_stripe_publishable_key');
+const StripeAPIComponent = () => {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [isPaymentSuccessful, setIsPaymentSuccessful] = useState(false);
+  const [error, setError] = useState(null);
 
-const CheckoutForm = () => {
-  const [isPaid, setIsPaid] = useState(false);
-
-  const handlePayment = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Call your server to create a Payment Intent or Payment Method
-    // Send the necessary information to your server, and your server should handle the Stripe API interactions
-    try {
-      const response = await fetch('/your-payment-endpoint', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ amount: 1000, currency: 'usd' }),
-      });
+    if (!stripe || !elements) {
+      // Stripe.js has not yet loaded.
+      return;
+    }
 
-      if (response.ok) {
-        const result = await response.json();
-        const { clientSecret } = result;
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: 'card',
+      card: elements.getElement(CardElement),
+    });
 
-        const { paymentIntent, error } = await stripe.confirmCardPayment(clientSecret, {
-          payment_method: {
-            card: elements.getElement(CardElement),
-            billing_details: {
-              name: 'John Doe',
-            },
-          },
-        });
+    if (error) {
+      setError(error.message);
+    } else {
+      // Send the paymentMethod.id to your server to complete the payment
+      // Replace with your server-side code to handle the payment
+      const paymentMethodId = paymentMethod.id;
 
-        if (error) {
-          console.error(error);
-        } else if (paymentIntent.status === 'succeeded') {
-          setIsPaid(true);
-        }
-      } else {
-        console.error('Failed to create payment intent.');
-      }
-    } catch (error) {
-      console.error(error);
+      // Example: Send the paymentMethodId to your server
+      // fetch('/your-server-endpoint', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ paymentMethodId }),
+      // })
+      // .then(response => response.json())
+      // .then(data => {
+      //   if (data.success) {
+      //     setIsPaymentSuccessful(true);
+      //   } else {
+      //     setError(data.error);
+      //   }
+      // })
     }
   };
 
   return (
-    <form onSubmit={handlePayment}>
-      <div className="form-group">
-        <label>Card details:</label>
-        <CardElement />
-      </div>
-      <button type="submit" disabled={isPaid}>
-        {isPaid ? 'Paid' : 'Pay Now'}
-      </button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Card details:
+          <CardElement />
+        </label>
+        <button type="submit" disabled={!stripe}>
+          Pay
+        </button>
+      </form>
+      {error && <div className="error">{error}</div>}
+      {isPaymentSuccessful && <div className="success">Payment was successful!</div>}
+    </div>
   );
 };
 
-const StripePayment = () => {
-  return (
-    <Elements stripe={stripePromise}>
-      <CheckoutForm />
-    </Elements>
-  );
-};
-
-export default StripePayment;
+export default StripeAPIComponent;
