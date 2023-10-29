@@ -3,6 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+import CheckoutForm from "./components/payment/checkoutForm";
+import "./components/payment/checkout.css";
+
+const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -24,6 +31,14 @@ function App() {
             <Route 
               path="/" 
               element={<Home />}
+            />
+            {/* <Route 
+              path="/game" 
+              element={<Game />}
+            /> */}
+            <Route 
+            path="/checkout"
+            element={<CheckoutForm />}
             />
           </Routes>
         </div>
