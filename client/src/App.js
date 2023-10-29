@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Game from './pages/gamePage';
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 
@@ -32,10 +33,10 @@ function App() {
               path="/" 
               element={<Home />}
             />
-            {/* <Route 
+            <Route 
               path="/game" 
               element={<Game />}
-            /> */}
+            />
             <Route 
             path="/checkout"
             element={<CheckoutForm />}

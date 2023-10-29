@@ -8,8 +8,8 @@ import {
   DialogTitle
 } from "@material-ui/core";
 import Card from "./card";
-import "./card.scss";
-import happyFace from "client/public/images/happy.png"; 
+// import "./card.scss";
+import happyFace from ".../public/images/happy.png"; 
 import sadFace from "client/public/images/sad.png";
 import angryFace from "client/public/images/angry.png";
 import sleepyFace from "client/public/images/sleepy.png";
