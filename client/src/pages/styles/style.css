@@ -3,7 +3,7 @@
   text-align: center;
   background: rgb(85, 187, 210);
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   font-family: verdana;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 /* Page Content */
-.content {padding:30px;}
+.content {padding:35px;}
 
 h1 {
     color: white;
@@ -36,4 +36,5 @@ p {
     text-align: center;
     font-family: verdana;
     font-size: small;
+    color: rgb(53, 51, 51);
   }
