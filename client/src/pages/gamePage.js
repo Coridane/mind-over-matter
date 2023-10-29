@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from '../components/nav';
 import Game from '../components/game'
 
 function gamePage () {

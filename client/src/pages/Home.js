@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Homepage() {
     return (
         /*About Autism with link to page*/
