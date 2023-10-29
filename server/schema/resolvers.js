@@ -10,6 +10,7 @@ const resolvers = {
             const User = await  ;
             return User;
         },
+        createPaymentMethod: async ()
 
     },
 },
