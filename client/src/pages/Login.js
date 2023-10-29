@@ -1,7 +1,9 @@
 import React from "react";
-import Nav from "../components/nav";
 
-<div class="form-structor">
+
+function Login() {
+    return(
+		<div class="form-structor">
 	<div class="signup">
 		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
 		<div class="form-holder">
@@ -22,3 +24,7 @@ import Nav from "../components/nav";
 		</div>
 	</div>
 </div>
+	)
+}
+
+export default Login;

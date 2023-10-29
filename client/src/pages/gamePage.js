@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from '../components/nav';
 import Game from '../components/game'
 
 function gamePage () {
@@ -11,7 +10,7 @@ function gamePage () {
         </div>
         <div className= "game-container">
             <p> Game component goes here
-            
+            <Game/>
             </p>
         </div>
     </div>
