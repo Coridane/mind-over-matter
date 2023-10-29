@@ -11,7 +11,7 @@ function gamePage () {
         </div>
         <div className= "game-container">
             <p> Game component goes here
-            
+            <Game/>
             </p>
         </div>
     </div>
