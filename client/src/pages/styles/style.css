@@ -1,0 +1,39 @@
+.header {
+  padding: 10px;
+  text-align: center;
+  background: rgb(85, 187, 210);
+  color: white;
+  font-size: 20px;
+  font-family: verdana;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: verdana;
+}
+body {
+  font-family: verdana;
+  margin: 0;
+}
+
+/* Page Content */
+.content {padding:30px;}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+}
+p {
+    font-family: verdana;
+    font-size: 18px;
+  }
+  /* Style the footer */
+.footer {
+    background-color: rgb(85, 187, 210);
+    padding: 15px;
+    text-align: center;
+    font-family: verdana;
+    font-size: small;
+  }
