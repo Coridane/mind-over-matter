@@ -13,7 +13,7 @@ body {
 	margin-left: 50px;
 }
 
-/* CSS for logged out page */
+/* Logged out page */
 
 .welcomePanel {
 	display: flex;
@@ -29,7 +29,9 @@ body {
 	font-size: 16pt;
 }
 
-/* CSS for registration and login page */
+/* CSS for registration and login */
+
+/* Login page */
 
 #formView {
 	min-height: 100vh;		
@@ -227,28 +229,28 @@ body {
 	}
 }
 
-	.submit-btn {
-		background-color: #6B92A4;
-		color: rgba(256,256,256,0.7);
-		border:0;
-		border-radius: 15px;
-		display: block;
-		margin: 15px auto; 
-		padding: 15px 45px;
-		width: 100%;
-		font-size: 13px;
-		font-weight: bold;
-		cursor: pointer;
-		opacity: 1;
-		visibility: visible;
-		-webkit-transition: all .3s ease;
+			.submit-btn {
+				background-color: #6B92A4;
+				color: rgba(256,256,256,0.7);
+				border:0;
+				border-radius: 15px;
+				display: block;
+				margin: 15px auto; 
+				padding: 15px 45px;
+				width: 100%;
+				font-size: 13px;
+				font-weight: bold;
+				cursor: pointer;
+				opacity: 1;
+				visibility: visible;
+				-webkit-transition: all .3s ease;
 
-		&:hover {
-			transition: all .3s ease;
-			background-color: rgba(0,0,0,0.8);
+				&:hover {
+					transition: all .3s ease;
+					background-color: rgba(0,0,0,0.8);
+				}
+			}
 		}
-	}
-}
 		
 		&.slide-up {
 			top: 90%;

@@ -2,7 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
-import Login from './pages/Login';
+import { Login } from './pages/Login';
+
+// Register is a tab on the login page, so an import for Register is not necessary.
 
 const client = new ApolloClient({
   uri: '/graphql',

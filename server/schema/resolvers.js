@@ -7,7 +7,7 @@ const resolvers = {
             return score;
         },
         createUser: async (parent, args) => {
-            const User = await  ;
+            const User = await ;
             return User;
         },
         createPaymentMethod: async ()
