@@ -8,6 +8,7 @@ import {
   DialogTitle
 } from "@material-ui/core";
 import Card from "./card";
+import "./game.scss";
 import "./card.scss";
 import happyFace from "../images/happy.png"
 import sadFace from "../images/sad.png";
