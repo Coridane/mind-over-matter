@@ -1,5 +1,6 @@
 import React from "react";
-import Game from '../components/game/Game'
+import Game from '../components/game/Game';
+const sass = require('sass');
 
 function gamePage () {
     return (
@@ -11,6 +12,7 @@ function gamePage () {
         <div className= "game-container">
             <p> Game component goes here
             <Game/>
+
             </p>
         </div>
     </div>

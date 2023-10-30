@@ -8,13 +8,15 @@ import {
   DialogTitle
 } from "@material-ui/core";
 import Card from "./card";
-// import "./card.scss";
-import happyFace from ".../public/images/happy.png"; 
-import sadFace from "client/public/images/sad.png";
-import angryFace from "client/public/images/angry.png";
-import sleepyFace from "client/public/images/sleepy.png";
-import loveFace from "client/public/images/love.png";
-import sickFace from "client/public/images/sick.png";
+import "./card.scss";
+import happyFace from "../images/happy.png"
+import sadFace from "../images/sad.png";
+import angryFace from "../images/angry.png";
+import sleepyFace from "../images/sleepy.png";
+import loveFace from "../images/love.png";
+import sickFace from "../images/sick.png";
+
+const sass = require('sass');
 
 const uniqueCardsArray = [
   {

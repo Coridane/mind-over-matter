@@ -1,6 +1,6 @@
 import React from "react";
 import classnames from "classnames";
-import logo from "./images/cardback.png";
+import logo from "../images/cardback.png";
 import "./card.scss";
 
 const Card = ({ onClick, card, index, isInactive, isFlipped, isDisabled }) => {
