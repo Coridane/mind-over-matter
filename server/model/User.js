@@ -16,6 +16,9 @@ const userSchema = new Schema({
         required: true,
         // regex for low security pw
     },
+    highScore: {
+      type: INT
+    }
   });
 
 const User = model('User', userSchema);
