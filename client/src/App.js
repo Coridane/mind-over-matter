@@ -25,6 +25,11 @@ function App() {
               path="/" 
               element={<Home />}
             />
+            {/* If logged in -> render GamePage */}
+            {/* <Route
+              path="/gamePage"
+              element={<Game />}
+            /> */}
           </Routes>
         </div>
       </Router>
