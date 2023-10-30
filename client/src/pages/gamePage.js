@@ -1,6 +1,5 @@
 import React from "react";
 import Game from '../components/game';
-import button from '../home';
 
 function gamePage () {
     return (
