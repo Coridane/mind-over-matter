@@ -1,26 +1,37 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
+
 
 const userSchema = new Schema({
-    firstName: {
+    userName: {
       type: String,
       required: true,
       unique: true,
     },
-    lastName: {
-        type: String,
-        required: true,
-        unique: true,
-      },
     password: {
         type: String,
         required: true,
-        // regex for low security pw
     },
     highScore: {
-      type: INT
+      type: Number, 
     }
   });
 
 const User = model('User', userSchema);
+
+// hash user password
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+// custom method to compare and validate password for logging in
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
 module.exports = User;

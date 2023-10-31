@@ -10,10 +10,13 @@ function gamePage () {
             </h1>
         </div>
         <div className= "game-container">
-            <p> Game component goes here
-            <Game/>
-
+            <p> Memory games are a great way to engage the brain in creative and interactive ways!
             </p>
+            <div><Game/>
+            </div>
+            
+
+            
         </div>
     </div>
     )
