@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <title>welcome</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet"  href="style.css">
-    <body style="background-color:rgb(222,197,227);
-    background:linear-gradient(90deg, rgba(222,197,227,1) 10%, rgba(205,237,253,1) 30%, rgba(182,220,254,1) 50%, rgba(169,248,251,1) 70%, rgba(129,247,229,1) 90%)">
-    <script src="https://kit.fontawesome.com/7a2d04f8e9.js" crossorigin="anonymous"></script>
-   
-    </header>
-    <div class="header">
+import React from "react";
+
+function Home() {
+    return(
+<div class= "app" > 
+<div class="header">
      <h1>Welcome</h1>
 </div>    
 <div class="content">
     <h2>About Autism<h2>
     <p>Autism spectrum disorder <span>ASD</span> is a neurological and developmental disorder that affects how people interact with others, communicate, learn, and behave. Although autism can be diagnosed at any age, it is described as a “developmental disorder” because symptoms generally appear in the first 2 years of life.  To learn more about autism, please visit <a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd#:~:text=Autism%20Spectrum%20Disorder-,Overview,first%202%20years%20of%20life.">here</a>.</p></p>
-    </head>
-    <body>
+
         <h2>Resources</h2>
         <hr />
             <h3 className="heading-2"><span>What Steps Should You Take?</span></h3>
@@ -63,13 +55,15 @@
             <p className="option"><span>Or Not Sure Where to Donate?</span></p>
             <p className="donation-link-2">Donate with us and we will choose a donation destination for you.  One hundred percent of the donation will go to that destination, and we will provide proof of that donation to you.</p>
             <a href="{/*INSERT PAGE LINK*/}"><button>Donate Through Us</button></a> {/*Need to add link to page*/}
+            </div>
   
-        </div>
-  
-    <div class="footer">
-        <p>Powered by MindOverMatter 2023</p>
-        <i class="fas fa-heart" style="font-size:25px;"></i>
-      
-      </footer>
-</body>
-</html>
+            <div class="footer">
+            <footer>
+            <p>Powered by MindOverMatter 2023</p>
+            <i class="fas fa-heart" style="font-size:25px;"></i>
+        </footer>
+      </div>
+    </div>
+)
+}
+export default Home;
