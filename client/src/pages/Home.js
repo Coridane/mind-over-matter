@@ -52,7 +52,7 @@ function Homepage() {
             <p className="donation-link-1">If you would like to donate to an organization that supports autism, please visit this site for the most popular donation sites in the country<a href="https://www.appliedbehavioranalysisprograms.com/best-autism-charities/">here</a>.</p>
             <p className="option"><span>Or Not Sure Where to Donate?</span></p>
             <p className="donation-link-2">Donate with us and we will choose a donation destination for you.  One hundred percent of the donation will go to that destination, and we will provide proof of that donation to you.</p>
-            <a href="{/*INSERT PAGE LINK*/}"><button>Donate Through Us</button></a> {/*Need to add link to page*/}
+            <a href="https://donate.stripe.com/test_bIYfZT2SobC2bW8fYY" target="_blank"><button>Stripe Donation</button></a>
             <hr />
         </div>
     );

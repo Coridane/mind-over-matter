@@ -35,7 +35,6 @@ const resolvers = {
                 return { token, user };
               },
         
-        // createPaymentMethod: async ()
     }
 };
 
