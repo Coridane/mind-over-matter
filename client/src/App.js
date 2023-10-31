@@ -44,12 +44,12 @@ function App() {
           <Routes>
             {/* if logged out -> render Login */}
             <Route 
-              path="/login" 
+              path="/" 
               element={<Login />}
             />
              {/* if logged in -> render Home */}
             <Route 
-              path="/" 
+              path="/home" 
               element={<Home />}
             />
             <Route 

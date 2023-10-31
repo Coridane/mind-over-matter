@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import {useMutation} from "@apollo/client";
 import {ADD_USER, LOGIN_USER} from "../utils/mutations";
 import Auth from "../components/auth/authService";
-
+import "../styles/styles.css";
+// import loginWidget from "../styles/loginWidget";
 export const Login = () => {	
 
 	const [formData, setFormData] = useState({userName: "", password: ""});
@@ -64,10 +65,10 @@ const handleLoginSubmit = async (event)=>{
 		
 	
 
-		<div id="logo"><img src='../../../logo.png' />
+		<div id="logo"><img src='../../../client/public/images/logo.png' />
 		</div>
 
-	<div id="formView">
+	<div className="formView">
 		<div className="formPad">
 		  <form className="login" onSubmit={handleLoginSubmit}>    
 			  <h2 className="formlabel" id="login">Log in</h2>
