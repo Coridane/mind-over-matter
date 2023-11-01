@@ -35,11 +35,11 @@ img#puzzle {
 }
 
 .welcome {	
-	font-size: 16pt;
+	font-size: 14pt;
 }
 
 .welcome h1 {
-	font-size: 36pt;
+	font-size: 24pt;
 }
 
 /* CSS for login page */
@@ -139,8 +139,7 @@ input#loginPassword {
 }
 
 button{
-    margin-top: 30px;
-    width: 100%;
+    margin-top: 30px;    
     background-color: #ffffff;
     color: #080710;
     padding: 15px 0;
@@ -203,6 +202,11 @@ div.container-homepage {
 
 #gameBtn {
     margin-left: -40px;    
+    width: 1500px;
+}
+
+#stripeBtn {    
+    width: 1500px;
 }
 
 a {

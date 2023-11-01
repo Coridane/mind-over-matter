@@ -51,9 +51,9 @@ function Homepage() {
         {/*Donation sites and donation link*/}
         <h3 className="heading-5"><span>Would you like to donate to Autism research or donate to Autsim support?</span></h3>
             <p className="donation-link-1">If you would like to donate to an organization that supports autism, please visit this site for the most popular donation sites in the country<a href="https://www.appliedbehavioranalysisprograms.com/best-autism-charities/" target="blank"> Applied Behavior Analysis Progerams Guide</a>.</p>
-            <p className="option"><span>Or Not Sure Where to Donate?</span></p>
+            <p className="option"><span>Or not sure where to donate?</span></p>
             <p className="donation-link-2">Donate with us and we will choose a donation destination for you.  One hundred percent of the donation will go to that destination, and we will provide proof of that donation to you.</p>
-            <a href="https://donate.stripe.com/test_bIYfZT2SobC2bW8fYY" target="_blank"><button>Stripe Donation</button></a>
+            <a href="https://donate.stripe.com/test_bIYfZT2SobC2bW8fYY" target="_blank"><button id="stripeBtn">Stripe Donation</button></a>
             <hr />
         </div>
         </div>
