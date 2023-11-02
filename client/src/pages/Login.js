@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {useMutation} from "@apollo/client";
 import {ADD_USER, LOGIN_USER} from "../utils/mutations";
 import Auth from "../components/auth/authService";
-import "../styles/styles.css";
+// import "../styles/styles.css";
 // import loginWidget from "../styles/loginWidget";
 export const Login = () => {	
 
@@ -28,7 +28,7 @@ Auth.login(data.addUser.token)
 }catch(err){
 console.log(err)
 }
-window.assign("/")
+window.assign("/home")
 }
 
 const handleLoginSubmit = async (event)=>{
@@ -42,7 +42,7 @@ const handleLoginSubmit = async (event)=>{
 	}catch(err){
 	console.log(err)
 	}
-	window.location.assign("/")
+	window.location.assign("/home")
 	};
 	
     return(
