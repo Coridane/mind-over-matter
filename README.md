@@ -57,6 +57,8 @@ charities/
 
 ## Link to Deployed Site - Heroku
 
+https://github.com/Coridane/mind-over-matter/tree/main
+
 ## Link to GitHub Repository
 * https://github.com/Coridane/mind-over-matter
 ## License
