@@ -5,6 +5,7 @@ const stripe = require("stripe")('Our secret key');
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
 const {authMiddleware} = require('./utils/auth');
+const uri = "mongodb+srv://danielmarkwilliams:Oz5i7vDMUwYzCaJL@cluster0.zfrjcfj.mongodb.net/?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 3001;
 const app = express();

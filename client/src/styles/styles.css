@@ -6,12 +6,11 @@ body {
 	font-family: Roboto, serif;    
 }
 
-img#logo {
-	position: absolute;
-	height: auto;
-	width: 20%;
-	margin-top: -350px;
-	margin-left: -780px;
+img#logo {	
+    position: absolute;		
+    width: 20%;    
+	margin-top: -23%;
+	margin-left: -50%;
 }
 
 img#puzzle {
@@ -46,7 +45,7 @@ img#puzzle {
 
 .loginForm {
 	position: absolute;
-	top: 10px;
+	top: -5%;
     left: 570px;
 	height: auto;
 	width: 200px;
@@ -177,7 +176,7 @@ button{
 
 .registerForm {
     position: absolute;
-	top: 10px;
+	top: -5%;
     left: 1170px;
 	height: auto;
 	width: 200px;
