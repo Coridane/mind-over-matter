@@ -46,7 +46,7 @@ function App() {
             <Route 
               path="/" 
               element={<Login />}
-            />
+            />            
              {/* if logged in -> render Home */}
             <Route 
               path="/home" 

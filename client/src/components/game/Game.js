@@ -145,7 +145,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <h3>Play the Flip card game</h3>
+        <h3 id="gameTitle">Play the Flip card game</h3>
         <div>
           Select two cards with same content consequtively to make them vanish
         </div>

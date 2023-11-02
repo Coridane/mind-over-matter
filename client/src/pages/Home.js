@@ -3,7 +3,8 @@ import React from "react";
 
 function Homepage() {
     return (
-        /*About Autism with link to page*/
+        <div><img src="images/logo.png" id="logo"></img>
+        {/*About Autism with link to page*/}
         <div className="container-homepage">
             <h3 className="heading-1"><span>About Autism</span></h3>
             <p className="about-autism">Autism spectrum disorder <span>ASD</span> is a neurological and developmental disorder that affects how people interact with others, communicate, learn, and behave. Although autism can be diagnosed at any age, it is described as a “developmental disorder” because symptoms generally appear in the first 2 years of life.  To learn more about autism, please visit <a href="https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd#:~:text=Autism%20Spectrum%20Disorder-,Overview,first%202%20years%20of%20life." target="blank">The National Institute of Mental Health</a>.</p>
@@ -43,19 +44,21 @@ function Homepage() {
             <h3 className="heading-4"><span>Home-Based Therapy Games for Children with Autism</span></h3>
             <p className="home-based-therapy">Mind Over Matter would like to help the Autsim community with fun home-based therapy games that you can do in the comfort of your home.  Please click the tabs below for access to those games.</p>
             <ul className="game-list">
-                <li><a href="/game"><button>Memory Game</button></a></li> {/*Need to add link to page*/}  
+            <a href="/game"><button id="gameBtn">Memory Game</button></a> {/*Need to add link to page*/}  
             </ul> 
             <hr />
 
         {/*Donation sites and donation link*/}
         <h3 className="heading-5"><span>Would you like to donate to Autism research or donate to Autsim support?</span></h3>
             <p className="donation-link-1">If you would like to donate to an organization that supports autism, please visit this site for the most popular donation sites in the country<a href="https://www.appliedbehavioranalysisprograms.com/best-autism-charities/" target="blank"> Applied Behavior Analysis Progerams Guide</a>.</p>
-            <p className="option"><span>Or Not Sure Where to Donate?</span></p>
+            <p className="option"><span>Or not sure where to donate?</span></p>
             <p className="donation-link-2">Donate with us and we will choose a donation destination for you.  One hundred percent of the donation will go to that destination, and we will provide proof of that donation to you.</p>
-            <a href="https://donate.stripe.com/test_bIYfZT2SobC2bW8fYY" target="_blank"><button>Stripe Donation</button></a>
+            <a href="https://donate.stripe.com/test_bIYfZT2SobC2bW8fYY" target="_blank"><button id="stripeBtn">Stripe Donation</button></a>
             <hr />
+        </div>
         </div>
     );
 }
+
 
 export default Homepage;
