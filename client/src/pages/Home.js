@@ -42,7 +42,7 @@ function Homepage() {
 
         {/*Homebased Therapy - Main for game*/} 
             <h3 className="heading-4"><span>Home-Based Therapy Games for Children with Autism</span></h3>
-            <p className="home-based-therapy">Mind Over Matter would like to help the Autsim community with fun home-based therapy games that you can do in the comfort of your home.  Please click the tabs below for access to those games.</p>
+            <p className="home-based-therapy">Mind Over Matter would like to help the Autism community with fun home-based therapy games that you can do in the comfort of your home.  Please click the tabs below for access to those games.</p>
             <ul className="game-list">
             <a href="/game"><button id="gameBtn">Memory Game</button></a> {/*Need to add link to page*/}  
             </ul> 
